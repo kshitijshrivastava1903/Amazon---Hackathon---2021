@@ -50,7 +50,7 @@ Link for our website deployement is : https://amaze-safe.herokuapp.com/
 
 Our App can be simulated for only IOS devices using XCode software.
 
-![](Swift_IOS_App/Images/alarm_red.jpeg)
+![](iOS_App/Images/alarm_red.jpeg)
 
 
 #### 3D print
