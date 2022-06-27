@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>AmazeSafe: Threat</title>
+  </head>
+  <body margin:0;>
+    <div class="home-button">
+      <button class="button"><a href="{% url 'amazeUser' %}">Back TO Home</a></button>
+       <button class="button"><a href="{% url 'userLogout' %}"  style="right:0px">Logout</a></button>
+    </div>
+    <!--
+    <div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#home">Notify Friends</a>
+  <a href="#news">Stop Alarm</a>
+  <a href="#contact">Snapshot</a>
+  <a href="#contact">Get Location</a>
+
+
+</div>
+-->
+    <div class="Threat">
+      <p class="Threat-heading">THERE IS A THREAT !!</p>
+      <span>Last Updated at : {{lastUpdate}}</span>
+      <br></br>
+      <span>Box temperature: {{boxTemperature}}</span>
+        <br></br>
+    </div>
+
+
+    
+
+<div id="mid">
+<div class="Section">Alarm Status : <span class="description">{{alarmStatus}}</span></div>
+<div class="Section">Geolocation Coordinates: <span class="description"> {{gpsCoordinate}}</span></div>
+<div class="Section">Snapshot Matrix : <span class="description">{{imageMatrix}}</span></div>
+<div class="Section">Friends List : <span class="description"><a href="#" id="x">Friend List</a></span></div>
+</div>
+  </body>
+</html>
+<style>
+  body{
+    margin:10px;
+  }
+  .btn-group{
+    display:flex;
+    justify-content: center;
+  }
+    .btn-group button {
+  background-color: brown; 
+  border: 5px solid black; 
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: right; 
+  width:fit-to-content;
+  height:110px;
+  font-size: 20px;
+  display: inline-block;
+  border-radius: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  margin:10px;
+}
+#x{
+  cursor: pointer; 
+}
+#mid{
+  margin-left:20%;
+  display:flex;
+  flex-direction: column;
+   align-items:flex-start;
+
+}
+.home-button{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+body{
+  background-color: #CD5C5C
+}
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0
+}
+.header{
+  font-size: 25px;
+
+}
+.Threat{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.Section{
+  height:150px;
+  font-size: 40px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: white;
+  font-weight: bolder;
+}
+.Threat-heading{
+  font-size: 50px;
+  color :yellow	;
+  font-weight: bolder;
+}
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #E0FFFF;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height:120px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 40px;
+  width:20%;
+}
+
+.navbar a:hover {
+  background:#90EE90;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+
+.alarm-image{
+  height:80px;
+  width:80px;
+
+}
+.alarmKaImage{
+  margin-left: :40px;
+}
+.description{
+  font-size: 40px;
+  color:yellow;
+}
+
+</style>
